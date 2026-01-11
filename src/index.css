@@ -3,9 +3,9 @@
   line-height: 1.5;
   font-weight: 400;
 
-  color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
+  color-scheme: light;
+  color: #213547;
+  background-color: #f8f6f6ca;
 
   font-synthesis: none;
   text-rendering: optimizeLegibility;
@@ -43,7 +43,7 @@ button {
   font-size: 1em;
   font-weight: 500;
   font-family: inherit;
-  background-color: #1a1a1a;
+  background-color: #f9f9f9;
   cursor: pointer;
   transition: border-color 0.25s;
 }
@@ -66,4 +66,38 @@ button:focus-visible {
   button {
     background-color: #f9f9f9;
   }
+}
+
+/* Card image overlay shown on hover */
+.card-media {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+}
+.card-media img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.card-overlay {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #ffffff;
+  background: rgba(0,0,0,0.45);
+  opacity: 0;
+  transition: opacity 180ms ease-in-out;
+  font-weight: 600;
+  pointer-events: none;
+}
+.card-media:hover .card-overlay {
+  opacity: 1;
+}
+
+/* Show overlay when hovering anywhere on the card */
+.video-card:hover .card-overlay {
+  opacity: 1;
 }
