@@ -3,6 +3,7 @@ import MainLayout from "../layout/MainLayout";
 import PageNotFound from "../pages/PageNotFound";
 import LoginPage from "../pages/LoginPage";
 import Home from "../pages/Home";
+import StatsPage from "../pages/StatsPage";
 
 // Layouts
 
@@ -16,6 +17,7 @@ export const router = createBrowserRouter([
     element: <MainLayout />,
     children: [
       { path: "/", element: <Home /> },
+      { path: "/stats", element: <StatsPage /> }
     ]
   },
   { path: "*", element: <PageNotFound /> }
