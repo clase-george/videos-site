@@ -17,7 +17,7 @@ export default function Home() {
                     <p style={{fontSize: '1.15rem', marginTop: '0.5rem', color: '#767676ff'}}>Explora nuestro contenido multimedia y comienza a aprender hoy mismo</p>
                 </div>
                     <div style={{marginLeft: '1rem'}}>
-                        <Button variant="contained" color="primary" startIcon={<CloudUploadOutlinedIcon />}>
+                        <Button variant="contained" href="/upload" color="primary" startIcon={<CloudUploadOutlinedIcon />}>
                             Subir video
                         </Button>
                     </div>
@@ -33,7 +33,7 @@ export default function Home() {
                 </Stack>
             </div>
             <div style={{padding: '2rem'}}>
-                <div style={{display: 'grid', gridTemplateColumns: 'repeat(5, 1fr)', gap: '1rem'}}>
+                <div style={{display: 'grid', gridTemplateColumns: 'repeat(4, 1fr)', gap: '2rem'}}>
                     {videosMock.map((video, i) => (
                         <Card
                             key={i}
@@ -75,7 +75,7 @@ export default function Home() {
                                     </span>
                                 </div>
                                 <div>
-                                    <Button variant="contained" color="secondary" href="/stats" size="small" startIcon={<QueryStatsIcon />} style={{display: 'flex', justifyContent: 'center', marginTop: '0.5rem', textTransform: 'none', fontSize: '1rem', paddingRight: '1.25rem', paddingLeft: '1.25rem', width: '100%'}} sx={{color:"primary.main", '&:hover': {backgroundColor: '#5b46ff', color: '#ffffff'}}}>
+                                    <Button variant="contained" color="secondary" href="/stats" size="small" startIcon={<QueryStatsIcon />} style={{display: 'flex', justifyContent: 'center', marginTop: '1rem', textTransform: 'none', fontSize: '1rem', paddingRight: '1.25rem', paddingLeft: '1.25rem', width: '100%'}} sx={{color:"primary.main", '&:hover': {backgroundColor: '#5b46ff', color: '#ffffff'}}}>
                                         Ver Estadisticas
                                     </Button>
                                 </div>
