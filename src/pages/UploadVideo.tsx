@@ -101,8 +101,7 @@ export default function UploadVideo() {
                 top: 24,  // La mitad de la altura de tu icono (48px / 2)
                 left: 'calc(-50% + 24px)', // Ajustamos el offset al nuevo centro
                 right: 'calc(50% + 24px)',
-                position: 'absolute',
-                
+                position: 'absolute',      
     },
             
         }}>
@@ -160,9 +159,9 @@ export default function UploadVideo() {
               </Button>
               {activeStep !== steps.length &&
                 (completed[activeStep] ? (
-                  <Typography variant="caption" sx={{ display: 'inline-block' }}>
-                    Step {activeStep + 1} already completed
-                  </Typography>
+                  <Box sx={{ ml: 1 ,border:"1px solid",borderColor:"primary.main",padding:"0.05rem 1rem", borderRadius:"7px",display:"flex", alignItems:"center"}} >
+                    <h3 style={{fontWeight:"initial" , fontSize:"0.95rem", padding:0, margin:0, color:"primary.main"}}>Ya completado</h3>
+                  </Box>
                 ) : (
                   <Button onClick={handleComplete}>
                     {completedSteps() === totalSteps() - 1
